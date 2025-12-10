@@ -198,16 +198,21 @@ puppeteer-core
 PDF returned as downloadable file
 
 ▶️ ##**Run Locally (Development)**
+
 1️⃣##**Backend**
 
 cd backend
+
 npm install
+
 npm run dev
 
 2️⃣##**Frontend**
 
 cd frontend
+
 npm install
+
 npm run dev
 
 🛡️ ##**Security Implementations**
