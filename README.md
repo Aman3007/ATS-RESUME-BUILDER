@@ -78,39 +78,73 @@ Render
 
 📁 Project Structure
 ATS-RESUME-BUILDER/
+
 │
+
 ├── backend/
+
 │   ├── controllers/
+
 │   │   ├── authController.js
+
 │   │   ├── resumeController.js
+
 │   │   └── pdfController.js
+
 │   │
+
 │   ├── models/
+
 │   │   ├── User.js
+
 │   │   └── Resume.js
+
 │   │
+
 │   ├── routes/
+
 │   │   ├── authRoutes.js
+
 │   │   └── resumeRoutes.js
+
 │   │
+
 │   ├── middleware/
+
 │   │   └── authMiddleware.js
+
 │   │
+
 │   ├── utils/
+
 │   │   └── pdfTemplates.js
+
 │   │
+
 │   ├── db.js
+
 │   ├── server.js
+
 │   └── .gitignore
+
 │
+
 ├── frontend/
+
 │   ├── src/
+
 │   │   ├── components/
+
 │   │   │   ├── Auth.jsx
+
 │   │   │   └── Builder.jsx
+
 │   │   │
+
 │   │   ├── App.jsx
+
 │   │   └── main.jsx
+
 │
 └── README.md
 
