@@ -5,7 +5,7 @@ import Auth from "./components/Auth";
 import Builder from "./components/Builder";
 
 //  Global Axios Config (IMPORTANT)
-axios.defaults.baseURL = "http://localhost:5000/api";
+axios.defaults.baseURL = "https://ats-resume-builder-stic.onrender.com";
 axios.defaults.withCredentials = true;
 
 const App = () => {
