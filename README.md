@@ -1,5 +1,5 @@
-✅ ATS RESUME BUILDER – Full Stack Application
-Live link : https://ats-resume-builder-front.onrender.com/
+✅ ##**ATS RESUME BUILDER** – Full Stack Application
+##**Live link** : https://ats-resume-builder-front.onrender.com/
 
 A full-stack ATS-friendly Resume Builder that allows users to:
 
@@ -15,7 +15,7 @@ Store data securely in MongoDB
 
 Deployed using Render
 
-🚀 Live Features
+🚀 ##**Live Features**
 
 ✅ User Authentication (Register / Login / Logout)
 
@@ -35,36 +35,37 @@ Deployed using Render
 
 ✅ Deployed on Render (Production Ready)
 
-🧠 Tech Stack
+🧠 ##**Tech Stack**
+
 🔷 Frontend
 
-React.js
+- React.js
 
-Axios – API requests
+- Axios – API requests
 
-Framer Motion – animations
+- Framer Motion – animations
 
-Lucide React Icons
+- Lucide React Icons
 
-Tailwind CSS – UI styling
+- Tailwind CSS – UI styling
 
 🔷 Backend
 
-Node.js
+- Node.js
 
-Express.js
+- Express.js
 
-MongoDB + Mongoose
+- MongoDB + Mongoose
 
-JWT (jsonwebtoken)
+- JWT (jsonwebtoken)
 
-bcryptjs
+- bcryptjs
 
-cookie-parser
+- cookie-parser
 
-dotenv
+- dotenv
 
-🔷 PDF Generation
+🔷 ##**PDF Generation**
 
 puppeteer-core
 
@@ -72,11 +73,11 @@ puppeteer-core
 
 Custom HTML Resume Templates
 
-🔷 Deployment
+🔷 ##**Deployment**
 
 Render
 
-📁 Project Structure
+📁 ##**Project Structure**
 ATS-RESUME-BUILDER/
 
 │
@@ -148,7 +149,7 @@ ATS-RESUME-BUILDER/
 │
 └── README.md
 
-🔐 Authentication Flow
+🔐 ##**Authentication Flow**
 
 User registers with:
 
@@ -168,7 +169,7 @@ All resume routes are protected using:
 
 authMiddleware.js
 
-📝 Resume Features
+📝 ##**Resume Features**
 
 Personal Details
 
@@ -182,7 +183,7 @@ Resume stored in MongoDB
 
 Each user sees only their own resumes
 
-📄 PDF Generation System
+📄 ##**PDF Generation System**
 
 Resume data converted into HTML using:
 
@@ -209,7 +210,7 @@ cd frontend
 npm install
 npm run dev
 
-🛡️ Security Implementations
+🛡️ ##**Security Implementations**
 
 Password Hashing (bcrypt)
 
@@ -221,7 +222,7 @@ Protected API Routes
 
 User Resume Isolation
 
-🧪 Tested Functionalities
+🧪 ##**Tested Functionalities**
 
 ✅ Login / Register
 
