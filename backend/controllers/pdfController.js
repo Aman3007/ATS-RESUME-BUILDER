@@ -1,17 +1,10 @@
-// backend/controllers/pdfController.js
-const puppeteer = require("puppeteer");
+const puppeteer = require("puppeteer-core");
+const chromium = require("@sparticuz/chromium");
 const { generateResumeHTML } = require("../utils/pdfTemplates");
-
 
 const generatePDF = async (req, res) => {
   try {
-    const {
-      personalInfo,
-      skills,
-      experience,
-      education,
-      template
-    } = req.body;
+    const { personalInfo, skills, experience, education, template } = req.body;
 
     const html = generateResumeHTML(
       personalInfo,
@@ -22,14 +15,17 @@ const generatePDF = async (req, res) => {
     );
 
     const browser = await puppeteer.launch({
-      headless: true,
-      args: ["--no-sandbox", "--disable-setuid-sandbox"]
+      args: chromium.args,
+      defaultViewport: chromium.defaultViewport,
+      executablePath: await chromium.executablePath(),
+      headless: chromium.headless
     });
 
     const page = await browser.newPage();
+
     await page.setContent(html, { waitUntil: "networkidle0" });
 
-    const pdf = await page.pdf({
+    const pdfBuffer = await page.pdf({
       format: "A4",
       printBackground: true,
       margin: { top: "20px", right: "20px", bottom: "20px", left: "20px" }
@@ -37,11 +33,15 @@ const generatePDF = async (req, res) => {
 
     await browser.close();
 
-    res.contentType("application/pdf");
-    res.send(pdf);
-  } catch (err) {
-    console.error("PDF generation error:", err);
-    res.status(500).json({ message: "Error generating PDF" });
+    res.set({
+      "Content-Type": "application/pdf",
+      "Content-Disposition": "attachment; filename=resume.pdf"
+    });
+
+    return res.send(pdfBuffer);
+  } catch (error) {
+    console.error("PDF GENERATION ERROR:", error);
+    res.status(500).json({ message: "PDF generation failed on server" });
   }
 };
 
