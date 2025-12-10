@@ -6,8 +6,9 @@ const jwt = require("jsonwebtoken");
 // Helper: create cookie options
 const cookieOptions = {
   httpOnly: true,
-  maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
-  sameSite: "lax"
+  maxAge: 7 * 24 * 60 * 60 * 1000,
+  sameSite: "none",
+  secure: true
 };
 
 if (process.env.NODE_ENV === "production") {
