@@ -53,6 +53,7 @@ Puppeteer is used for server-side PDF generation to ensure:
 ---
 
 ## 📂 Project Structure
+```bash
 
 backend/
 ├── controllers/
@@ -80,6 +81,7 @@ frontend/
 ├── App.jsx
 └── main.jsx
 
+```
 ---
 
 ## 🔐 Authentication Flow
@@ -113,13 +115,16 @@ PORT=5000
 
 ## ▶️ Run Locally
 
+```bash
 ### Backend
 npm install  
-npm run dev  
-
+npm run dev
+```
+```bash
 ### Frontend
 npm install  
 npm run dev  
+```
 
 ---
 
